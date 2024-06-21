@@ -64,13 +64,19 @@ main {
   margin: 16px 0;
 }
 
-strong {
-  color: rgb(246, 82, 130);
+.weather-app-details strong {
+  color: #f65282;
 }
 
 .weather-app-temp-container {
   display: flex;
 }
+
+.weather-app-icon {
+  height: 88px;
+  width: 88px;
+}
+
 .weather-app-temperature {
   font-size: 88px;
   font-weight: 700;
