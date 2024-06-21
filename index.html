@@ -3,50 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <title>Vanilla Weather Search</title>
   </head>
   <body>
+    <div class="weather-app">
+      <header>
+        <form class="search-form" action="">
+          <input
+            type="search"
+            placeholder="Enter a city..."
+            required
+            class="search-form-input"
+          />
+          <input type="submit" value="search" class="search-form-button" />
+        </form>
+      </header>
 
-  <div class="weather-app">
+      <main>
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city">Boston</h1>
+            <p class="weather-app-details">
+              <span id="time">Tuesday 14:49</span>
+              ,
+              <span id="description">scattered clouds</span>
+              <br />
+              Humidity: <strong id="humidity">66%</strong> , Wind:
+              <strong id="wind-speed">3.13km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temp-container">
+            <div class="weather-app-temperature">⛅12</div>
+            <div class="weather-app-unit">°C</div>
+          </div>
+        </div>
+      </main>
 
-    <header>
-      <form class="search-form" action="">
-        <input type="search" placeholder="Enter a city..." required class="search-form-input" />
-        <input type="submit" value="search" class="search-form-button" />
-      </form>
-    </header>
-    
-    <main>
-      <div class="weather-app-data">
-      <div>
-        <p class="weather-app-details">
-        <h1 class="weather-app-city">Boston</h1>
-        Tuesday 14:49, scattered clouds
-        <br />
-        Humidity: 66%, Wind: 3.13km/h
-        </p>
-      </div>
-      
-      <div class="weather-app-temperature">⛅12°C</div>
-      </div>
+      <footer>
+        This project was coded by
 
-    </main>
-
-    <footer>
-      This project was coded by
-      
-      <a href="https://github.com/dscottyoung2022" target="_blank">Daniella Scott-Young</a>, 
-      is open-sourced on <a href="https://github.com/dscottyoung2022/Week-7-Vanilla-Weather-Search" target="_blank">GitHub</a> 
-      and hosted on <a href="https://vanilla-weather-by-daniella.netlify.app/" target="_blank"  >Netlify</a>
+        <a href="https://github.com/dscottyoung2022" target="_blank"
+          >Daniella Scott-Young</a
+        >, is open-sourced on
+        <a
+          href="https://github.com/dscottyoung2022/Week-7-Vanilla-Weather-Search"
+          target="_blank"
+          >GitHub</a
+        >
+        and hosted on
+        <a
+          href="https://vanilla-weather-by-daniella.netlify.app/"
+          target="_blank"
+          >Netlify</a
+        >
       </footer>
-  
-
-  </div>
-
-    
+    </div>
   </body>
 </html>

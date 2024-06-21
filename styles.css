@@ -60,8 +60,25 @@ main {
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
   font-weight: 500;
-  line-height: 24px;
+  line-height: 20px;
   margin: 16px 0;
+}
+
+strong {
+  color: rgb(246, 82, 130);
+}
+
+.weather-app-temp-container {
+  display: flex;
+}
+.weather-app-temperature {
+  font-size: 88px;
+  font-weight: 700;
+  line-height: 88px;
+}
+.weather-app-unit {
+  font-size: 28px;
+  margin-top: 6px;
 }
 
 footer {
