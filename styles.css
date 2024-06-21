@@ -60,7 +60,7 @@ main {
   color: rgba(39, 33, 66, 0.4);
   font-size: 16px;
   font-weight: 500;
-  line-height: 20px;
+  line-height: 24px;
   margin: 16px 0;
 }
 
@@ -79,11 +79,12 @@ main {
 
 .weather-app-temperature {
   font-size: 88px;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 88px;
 }
 .weather-app-unit {
   font-size: 28px;
+  font-weight: bold;
   margin-top: 6px;
 }
 
