@@ -68,6 +68,10 @@ main {
   color: #f65282;
 }
 
+.symbol-color {
+  color: #f65282;
+}
+
 .weather-app-temp-container {
   display: flex;
 }
