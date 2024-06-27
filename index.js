@@ -1,13 +1,27 @@
+function updateWeatherData(response) {
+  let temperatureElement = document.querySelector("#weather-app-temperature");
+  let temperature = response.data.temperature.current;
+  let cityElement = document.querySelector("#city");
+
+  cityElement.innerHTML = response.data.city;
+  temperatureElement.innerHTML = Math.round(temperature);
+  console.log(temperature);
+}
+
 function searchCity(city) {
-  // Make api call and update the interface
+  let apiKey = "06a75966f48t8e1bb0f5829fc38o234b";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(updateWeatherData);
 }
 
 function handleSearchSubmit(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-form-input");
-  let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = searchInput.value;
+
+  searchCity(searchInput.value);
 }
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+searchCity("Boston");
