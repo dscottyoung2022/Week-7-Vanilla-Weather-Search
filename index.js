@@ -7,7 +7,7 @@ function updateWeatherData(response) {
   let windSpeed = document.querySelector("#wind-speed");
   let dayTime = document.querySelector("#time");
   let date = new Date(response.data.time * 1000);
-  let iconElement = document.querySelector("#icon");
+  let iconElement = document.querySelector("#weather-app-icon");
 
   cityElement.innerHTML = response.data.city;
   dayTime.innerHTML = formatDate(date);
@@ -54,21 +54,33 @@ function handleSearchSubmit(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast() {
-  let forecast = document.querySelector("#forecast");
+function displayForecast(response) {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
 
-  forecast.innerHTML = `
-  
-    <div class="weather-forecast-day">
-            <div class="weather-forecast-date">Tuesday</div>
-            <img src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" class="weather-forecast-icon">
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+          <div class="weather-forecast-day">
+            <div class="weather-forecast-date">${day}</div>
+
+            <div
+              class="weather-forecast-icon">⛅</div>
             <div class="weather-forecast-temperatures">
               <div class="weather-forecast-temperature">
-                <strong>15°</strong> 
+                <strong>15°</strong>
               </div>
-              <div class="weather-forecast-temperature">9°</div>
+              <div class="weather-forecast-temperature">
+                9°
               </div>
-`;
+            </div>
+          </div>
+        `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
 }
 
 let searchFormElement = document.querySelector("#search-form");
